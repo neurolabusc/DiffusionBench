@@ -34,7 +34,9 @@ python dwipreproc.py ./dwi
 
 # Performance
 
-The `dwi` dataset provides a benchmark for processing a 140×140×81 diffusion dataset with 204 volumes. Here is the performance of an 48Gb Apple M4 Pro:
+Several of these tests use optimized versions of mmorf, bedpost, probtrackx and eddy, for these we refer to the build date of these unreleased versions.
+
+The `dwi` dataset provides a benchmark for processing a 140×140×81 diffusion dataset with 204 volumes. Here is the performance for version 20260309 on an 48Gb Apple M4 Pro:
 
 | Stage                         | Seconds |
 | ----------------------------- | ------- |
@@ -56,7 +58,16 @@ Here is the same test on a 128 Gb DGX Spark using the executables from FSL 6.0.7
 | Probtrackx                    |     337 |
 | Total                         |    4958 |
 
+Here is the same test on the same 128 Gb DGX Spark using release 20260309.
 
+| Stage                         | Seconds |
+| ----------------------------- | ------- |
+| Topup                         |     320 |
+| Eddy                          |    1453 |
+| MMORF non-linear registration |     136 |
+| Bedpost                       |     612 |
+| Probtrackx                    |      95 |
+| Total                         |    2659 |
 
 ### Options
 
