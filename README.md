@@ -69,6 +69,28 @@ Here is the same test on the same 128 Gb DGX Spark using release 20260309.
 | Probtrackx                    |      95 |
 | Total                         |    2659 |
 
+Here is the same test on a 128 Gb AMD 7995wx (96 cores, 192 threads) with RTX4090 GPU using the executables from FSL 6.0.7.21.
+
+| Stage                         | Seconds |
+| ----------------------------- | ------- |
+| Topup                         |     441 |
+| Eddy                          |    1102 |
+| MMORF non-linear registration |     130 |
+| Bedpost                       |     267 |
+| Probtrackx                    |     162 |
+| TOTAL                         |    2159 |
+
+Here is the same test on the same 128 Gb 7995wx using release 20260309.
+
+| Stage                         | Seconds |
+| ----------------------------- | ------- |
+| Topup                         |     449 |
+| Eddy                          |     425 |
+| MMORF non-linear registration |     116 |
+| Bedpost                       |     274 |
+| Probtrackx                    |      33 |
+| Total                         |    1350 |
+
 ### Options
 
 | Flag | Description |
